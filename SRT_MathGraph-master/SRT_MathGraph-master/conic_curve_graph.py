@@ -47,9 +47,13 @@ PointOnCircle = ConstraintNode("PointOnCircle", [Circle,Point], "(self.input[0][
 PointInCircle = ConstraintNode("PointInCircle", [Circle,Point], "(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2 < self.input[0]['r']**2")
 #点在圆外
 PointOutCircle = ConstraintNode("PointOutCircle", [Circle,Point], "(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2 > self.input[0]['r']**2")
+#直线和圆相交
+LineIntersectCircle = ConstraintNode("LineIntersectCircle",[Line,Circle,Point,Point],"self.input[0]['a']*self.input[2]['x']+self.input[0]['b']*self.input[2]['y']+self.input[0]['c']==0 and self.input[0]['a']*self.input[3]['x']+self.input[0]['b']*self.input[3]['y']+self.input[0]['c']==0 and (self.input[1]['a']-self.input[2]['x'])**2+(self.input[1]['b']-self.input[2]['y'])**2==self.input[1]['r']**2 and (self.input[1]['a']-self.input[3]['x'])**2+(self.input[1]['b']-self.input[3]['y'])**2==self.input[1]['r']**2 and (self.input[2]['x']<self.input[3]['x'] or (self.input[2]['x']==self.input[3]['x'] and self.input[2]['y']<self.input[3]['y']))",E=["self.input[0]['a']*self.input[2]['x']+self.input[0]['b']*self.input[2]['y']+self.input[0]['c']","self.input[0]['a']*self.input[3]['x']+self.input[0]['b']*self.input[3]['y']+self.input[0]['c']","(self.input[1]['a']-self.input[2]['x'])**2+(self.input[1]['b']-self.input[2]['y'])**2-self.input[1]['r']**2","(self.input[1]['a']-self.input[3]['x'])**2+(self.input[1]['b']-self.input[3]['y'])**2-self.input[1]['r']**2"])
 
 
-node_names = ["Real", "Point","GetPoint","GetDistance",'Line', "GetLineb","PointOnLine", "GetLinea", "GetLinec","GetLine","Parallel","Vertical","Ellipsex","GetEllipsex","GetEllipsexC","GetEllipsexLeftC","PointOnEllipsex","Circle","GenerateCircle","GetCircleR","GetCircleCenter","PointOnCircle","PointInCircle","PointOutCircle","LineIntersectEllipsex"]
+
+node_names = ["Real", "Point","GetPoint","GetDistance",'Line', "GetLineb","PointOnLine", "GetLinea", "GetLinec","GetLine","Parallel","Vertical","Ellipsex","GetEllipsex","GetEllipsexC","GetEllipsexLeftC","PointOnEllipsex","Circle","GenerateCircle","GetCircleR","GetCircleCenter","PointOnCircle","PointInCircle","PointOutCircle","LineIntersectEllipsex","LineIntersectCircle"]
+
 nodes = {}
 for name in node_names:
     exec("nodes['%s'] = %s" % (name, name))

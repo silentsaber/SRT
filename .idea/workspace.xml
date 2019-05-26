@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc11874f-b700-4e6e-83ba-60e510e87f5c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SRT_MathGraph-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SRT_MathGraph-master/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt" afterDir="false" />
     </list>
@@ -54,19 +55,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
+        <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="166" column="18" lean-forward="true" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
+            <state relative-caret-position="186">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py">
+        <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="174" column="16" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -368,17 +369,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="166" column="18" lean-forward="true" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
+        <state relative-caret-position="186">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py">
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="174" column="16" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
         </state>
       </provider>
     </entry>
