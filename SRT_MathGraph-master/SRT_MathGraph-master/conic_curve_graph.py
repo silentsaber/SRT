@@ -19,7 +19,7 @@ Parallel=ConstraintNode("Parallel",[Line,Line],"self.input[0]['a']*self.input[1]
 #两直线垂直
 Vertical=ConstraintNode("Vertical",[Line,Line],"self.input[0]['a']*self.input[1]['a']+self.input[0]['b']*self.input[1]['b']==0",E=["self.input[0]['a']*self.input[1]['a']+self.input[0]['b']*self.input[1]['b']"])
 #椭圆（焦点在x轴）
-Ellipsex=ObjectNode("Ellipsex","a b","(self['a']>self['b'])&(self['b']>0)",spec_attr={"expression":"'x**2/'+str(a*a)+'y**2/'+str(b*b)+'=1'"})
+Ellipsex=ObjectNode("Ellipsex","a b","(self['a']>self['b'])&(self['b']>0)",spec_attr={"expression":"'x**2/'+str($a*$a)+'y**2/'+str($b*$b)+'=1'"})
 #由a、b生成椭圆
 GetEllipsex=OperationNode("GetEllipsex",[Real,Real],[Ellipsex],"self.output[0]['a'],self.output[0]['b']=self.input[0]['x'],self.input[1]['x']",E=["self.output[0]['a']-self.input[0]['x']","self.output[0]['b']-self.input[1]['x']"])
 #得到半焦距
@@ -31,7 +31,23 @@ GetEllipsexRightC=OperationNode("GetEllipsexRightC",[Ellipsex],[Point],"self.out
 #椭圆过点
 PointOnEllipsex=ConstraintNode("PointOnEllipsex",[Point,Ellipsex],"self.input[0]['x']**2/self.input[1]['a']**2+self.input[0]['y']**2/self.input[1]['b']**2==1",E=["self.input[0]['x']**2/self.input[1]['a']**2+self.input[0]['y']**2/self.input[1]['b']**2-1"])
 
-node_names = ["Real", "Point","GetPoint","GetDistance",'Line', "GetLineb","PointOnLine", "GetLinea", "GetLinec","GetLine","Parallel","Vertical","Ellipsex","GetEllipsex","GetEllipsexC","GetEllipsexLeftC","PointOnEllipsex"]
+#圆
+Circle=ObjectNode("Circle","a b r","self['r']>0",toSympy="",spec_attr={"expression":"'(x-'+str($a)+')**2+(y-'+str($b)+')**2='+str($r**2)"})
+#生成一个圆
+GenerateCircle=OperationNode("GenerateCircle",[Real,Real,Real],[Circle],"self.output[0]['a'],self.output[0]['b'],self.output[0]['r']=self.input[0]['x'],self.input[1]['x'],self.input[2]['x']",E=["self.output[0]['a']-self.input[0]['x']","self.output[0]['b']-self.input[1]['x']","self.output[0]['r']-self.input[2]['x']"])
+#获取圆的半径
+GetCircleR=OperationNode("GetCircleR",[Circle],[Real],"self.output[0]['x']=self.input[0]['r']",E=["self.output[0]['x']-self.input[0]['r']"])
+#获取圆的圆心
+GetCircleCenter=OperationNode("GetCircleCenter",[Circle],[Point],"self.output[0]['x'],self.output[0]['y']=self.input[0]['a'],self.input[0]['b']",E=["self.output[0]['x']-self.input[0]['a']","self.output[0]['y']-self.input[0]['b']"])
+#点在圆上
+PointOnCircle = ConstraintNode("PointOnCircle", [Circle,Point], "(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2==self.input[0]['r']**2",E=["(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2-self.input[0]['r']**2"])
+#点在圆内
+PointInCircle = ConstraintNode("PointInCircle", [Circle,Point], "(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2 < self.input[0]['r']**2")
+#点在圆外
+PointOutCircle = ConstraintNode("PointOutCircle", [Circle,Point], "(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2 > self.input[0]['r']**2")
+
+
+node_names = ["Real", "Point","GetPoint","GetDistance",'Line', "GetLineb","PointOnLine", "GetLinea", "GetLinec","GetLine","Parallel","Vertical","Ellipsex","GetEllipsex","GetEllipsexC","GetEllipsexLeftC","PointOnEllipsex","Circle","GenerateCircle","GetCircleR","GetCircleCenter","PointOnCircle","PointInCircle","PointOutCircle"]
 nodes = {}
 for name in node_names:
     exec("nodes['%s'] = %s" % (name, name))

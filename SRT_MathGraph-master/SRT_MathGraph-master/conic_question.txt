@@ -100,7 +100,7 @@ Constraint disac-disbc
 Query c.coordinate
 4 end
 
-$5
+5
 conic_curve_graph
 Line l
 Real l_a
@@ -120,4 +120,24 @@ Constraint l_c-0
 Constraint e_a-5
 Constraint e_b-4
 Query x.coordinate
-$5 end
+5 end
+
+
+$6
+conic_curve_graph
+Circle c
+Real c_a
+Real c_b
+Real c_r
+GenerateCircle c_a c_b c_r c
+Point x
+GetCircleCenter c x
+Real R
+GetCircleR c R
+Constraint c_a-1
+Constraint c_b-1
+Constraint c_r-1
+Query x.coordinate
+Query R
+Query c.expression
+$6 end
