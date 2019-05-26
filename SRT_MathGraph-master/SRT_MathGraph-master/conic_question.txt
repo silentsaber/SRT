@@ -123,7 +123,7 @@ Query x.coordinate
 5 end
 
 
-$6
+6
 conic_curve_graph
 Circle c
 Real c_a
@@ -140,4 +140,29 @@ Constraint c_r-1
 Query x.coordinate
 Query R
 Query c.expression
-$6 end
+6 end
+
+$7
+conic_curve_graph
+Line l
+Real l_a
+Real l_b
+Real l_c
+GetLine l_a l_b l_c l
+Ellipsex e
+Real e_a
+Real e_b
+GetEllipsex e_a e_b e
+Point x
+Point y
+LineIntersectEllipsex x y l e
+Constraint l_a-1
+Constraint l_b-1
+Constraint l_c-0
+Constraint e_a-5
+Constraint e_b-4
+Real dis
+GetDistance x y dis
+Query x.coordinate
+Query y.coordinate
+$7 end
