@@ -1,0 +1,123 @@
+#直线l1:x+y=0,  l2:2x+b+1=0   l1、l2交于点x  求x的坐标
+1
+conic_curve_graph
+Line l1
+Line l2
+Real a1
+Real a2
+Real b1
+Real b2
+Real c1
+Real c2
+Point x
+GetLinea l1 a1
+GetLineb l1 b1
+GetLinec l1 c1
+GetLinea l2 a2
+GetLineb l2 b2
+GetLinec l2 c2
+Constraint a1-1
+Constraint a2-2
+Constraint b1-1
+Constraint b2-1
+Constraint c1-0
+Constraint c2-1
+PointOnLine x l1
+PointOnLine x l2
+Query x.coordinate
+1 end
+
+#点a:(0,1)   b:(1,0)         直线l过点a、b    问l的表达式
+2
+conic_curve_graph
+Point a
+Point b
+Real a_x
+Real a_y
+Real b_x
+Real b_y
+GetPoint a_x a_y a
+GetPoint b_x b_y b
+Line l
+Constraint a_x-0
+Constraint a_y-1
+Constraint b_x-1
+Constraint b_y-0
+PointOnLine a l
+PointOnLine b l
+Query l.expression
+2 end
+
+#点a:(0,0)   直线l：x+y-1=0     点b在l上   ab距离为1 求点b的坐标
+3
+conic_curve_graph
+Point a
+Real a_x
+Real a_y
+GetPoint a_x a_y a
+Point b
+Line l
+Real l_a
+Real l_b
+Real l_c
+GetLine l_a l_b l_c l
+PointOnLine b l
+Real Disab
+GetDistance a b Disab
+Constraint a_x
+Constraint a_y
+Constraint l_a-1
+Constraint l_b-1
+Constraint l_c+1
+Constraint Disab-1
+Query b.coordinate
+3 end
+
+#点a:(0,0) b(0,1)    abc为等边三角形   求c的坐标
+4
+conic_curve_graph
+Point a
+Point b
+Real a_x
+Real a_y
+Real b_x
+Real b_y
+GetPoint a_x a_y a
+GetPoint b_x b_y b
+Point c
+Real disac
+Real disab
+Real disbc
+GetDistance a b disab
+GetDistance a c disac
+GetDistance b c disbc
+Constraint a_x
+Constraint a_y
+Constraint b_x
+Constraint b_y-1
+Constraint disab-disac
+Constraint disac-disbc
+Query c.coordinate
+4 end
+
+$5
+conic_curve_graph
+Line l
+Real l_a
+Real l_b
+Real l_c
+GetLine l_a l_b l_c l
+Ellipsex e
+Real e_a
+Real e_b
+GetEllipsex e_a e_b e
+Point x
+PointOnLine x l
+PointOnEllipsex x e
+Constraint l_a-1
+Constraint l_b-1
+Constraint l_c-0
+Constraint e_a-5
+Constraint e_b-4
+Query x.coordinate
+$5 end

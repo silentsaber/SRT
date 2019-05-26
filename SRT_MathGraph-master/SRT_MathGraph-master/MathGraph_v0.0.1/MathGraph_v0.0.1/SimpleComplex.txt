@@ -1,0 +1,41 @@
+ObjectNode
+Real
+x
+im(self['x']) == 0
+ObjectNode
+Complex
+a b
+
+OperationNode
+GetRealPart
+Complex
+Real
+self.output[0]['x'] = re(self.input[0]['a'])
+OperationNode
+GetImaginaryPart
+Complex
+Real
+self.output[0]['x'] = im(self.input[0]['b'])
+OperationNode
+CalcMod
+Complex
+Real
+self.output[0]['x'] = sqrt(self.input[0]['a']**2 + self.input[0]['b']**2)
+OperationNode
+ComplexAdd
+Complex Complex
+Complex
+self.output[0]['a'], self.output[0]['b'] = self.input[0]['a']+self.input[1]['a'], self.input[0]['b']+self.input[1]['b']
+OperationNode
+GetConjugate
+Complex
+Complex
+self.output[0]['a'], self.output[0]['b'] = self.input[0]['a'], -self.input[0]['b']
+ConstraintNode
+ComplexEqual
+Complex Complex
+self.input[0]['a']==self.input[1]['a'] && self.input[0]['b']== self.input[1]['b']
+ConstraintNode
+ComplexConjugate
+Complex Complex
+self.input[0]['a']==self.input[1]['a'] && self.input[0]['b']== -self.input[1]['b']
