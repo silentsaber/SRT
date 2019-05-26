@@ -161,9 +161,10 @@ Real DIS
 GetDistance x y DIS
 Query x.coordinate
 Query y.coordinate
+Query DIS
 $7 end
 
-8
+$8
 conic_curve_graph
 Circle c
 Real c_a
@@ -192,5 +193,5 @@ Query DIS
 Real D
 GetDistanceLineToCircle l c D
 Query D
-8 end
+$8 end
 
