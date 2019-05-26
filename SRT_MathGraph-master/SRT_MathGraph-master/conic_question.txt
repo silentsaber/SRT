@@ -157,13 +157,13 @@ Constraint l_b-1
 Constraint l_c-0
 Constraint e_a-5
 Constraint e_b-4
-Real dis
-GetDistance x y dis
+Real DIS
+GetDistance x y DIS
 Query x.coordinate
 Query y.coordinate
 $7 end
 
-$8
+8
 conic_curve_graph
 Circle c
 Real c_a
@@ -189,5 +189,8 @@ Query p2.coordinate
 Real DIS
 GetDistance p1 p2 DIS
 Query DIS
-$8 end
+Real D
+GetDistanceLineToCircle l c D
+Query D
+8 end
 

@@ -18,8 +18,12 @@ GetLine=ConstraintNode("GetLine",[Real,Real,Real,Line],"self.input[0]['x']*self.
 Parallel=ConstraintNode("Parallel",[Line,Line],"self.input[0]['a']*self.input[1]['b']==self.input[0]['b']*self.input[1]['a'] and !(self.input[0]['b']==self.input[1][b] and self.input[0]['c']==self.input[1]['c'] and self.input[0]['a']==self.input[1]['a']",E=["self.input[0]['a']*self.input[1]['b']-self.input[0]['b']*self.input[1]['a']"])
 #两直线垂直
 Vertical=ConstraintNode("Vertical",[Line,Line],"self.input[0]['a']*self.input[1]['a']+self.input[0]['b']*self.input[1]['b']==0",E=["self.input[0]['a']*self.input[1]['a']+self.input[0]['b']*self.input[1]['b']"])
+#点到直线的距离
+GetDistancePointToLine = OperationNode("GetDistancePointToLine",[Point,Line],[Real],"self.output[0]['x']=abs(self.input[1]['a']*self.input[0]['x']+self.input[1]['b']*self.input[0]['y']+self.input[1]['c'])/sqrt(self.input[1]['a']**2+self.input[1]['b']**2)",E=["self.output[0]['x']-abs(self.input[1]['a']*self.input[0]['x']+self.input[1]['b']*self.input[0]['y']+self.input[1]['c'])/sqrt(self.input[1]['a']**2+self.input[1]['b']**2)"])
+#平行直线到直线的距离
+
 #椭圆（焦点在x轴）
-Ellipsex=ObjectNode("Ellipsex","a b","(self['a']>self['b'])&(self['b']>0)",spec_attr={"expression":"'x**2/'+str($a*$a)+'y**2/'+str($b*$b)+'=1'"})
+Ellipsex=ObjectNode("Ellipsex","a b","(self['a']>self['b'])&(self['b']>0)",spec_attr={"expression":"'x**2/'+str($a*$a)+'+y**2/'+str($b*$b)+'=1'"})
 #由a、b生成椭圆
 GetEllipsex=OperationNode("GetEllipsex",[Real,Real],[Ellipsex],"self.output[0]['a'],self.output[0]['b']=self.input[0]['x'],self.input[1]['x']",E=["self.output[0]['a']-self.input[0]['x']","self.output[0]['b']-self.input[1]['x']"])
 #得到半焦距
@@ -49,10 +53,11 @@ PointInCircle = ConstraintNode("PointInCircle", [Circle,Point], "(self.input[0][
 PointOutCircle = ConstraintNode("PointOutCircle", [Circle,Point], "(self.input[0]['a']-self.input[1]['x'])**2+(self.input[0]['b']-self.input[1]['y'])**2 > self.input[0]['r']**2")
 #直线和圆相交
 LineIntersectCircle = ConstraintNode("LineIntersectCircle",[Line,Circle,Point,Point],"self.input[0]['a']*self.input[2]['x']+self.input[0]['b']*self.input[2]['y']+self.input[0]['c']==0 and self.input[0]['a']*self.input[3]['x']+self.input[0]['b']*self.input[3]['y']+self.input[0]['c']==0 and (self.input[1]['a']-self.input[2]['x'])**2+(self.input[1]['b']-self.input[2]['y'])**2==self.input[1]['r']**2 and (self.input[1]['a']-self.input[3]['x'])**2+(self.input[1]['b']-self.input[3]['y'])**2==self.input[1]['r']**2 and (self.input[2]['x']<self.input[3]['x'] or (self.input[2]['x']==self.input[3]['x'] and self.input[2]['y']<self.input[3]['y']))",E=["self.input[0]['a']*self.input[2]['x']+self.input[0]['b']*self.input[2]['y']+self.input[0]['c']","self.input[0]['a']*self.input[3]['x']+self.input[0]['b']*self.input[3]['y']+self.input[0]['c']","(self.input[1]['a']-self.input[2]['x'])**2+(self.input[1]['b']-self.input[2]['y'])**2-self.input[1]['r']**2","(self.input[1]['a']-self.input[3]['x'])**2+(self.input[1]['b']-self.input[3]['y'])**2-self.input[1]['r']**2"])
+#直线到圆的距离   (圆上的点到直线的最短距离)
+GetDistanceLineToCircle = OperationNode("GetDistanceLineToCircle",[Line,Circle],[Real],"self.output[0]['x']=(abs(self.input[0]['a']*self.input[1]['a']+self.input[0]['b']*self.input[1]['b']+self.input[0]['c'])/sqrt(self.input[0]['a']**2+self.input[0]['b']**2)-self.input[1]['r'])",E=["self.output[0]['x']-(abs(self.input[0]['a']*self.input[1]['a']+self.input[0]['b']*self.input[1]['b']+self.input[0]['c'])/sqrt(self.input[0]['a']**2+self.input[0]['b']**2)-self.input[1]['r'])"])
 
 
-
-node_names = ["Real", "Point","GetPoint","GetDistance",'Line', "GetLineb","PointOnLine", "GetLinea", "GetLinec","GetLine","Parallel","Vertical","Ellipsex","GetEllipsex","GetEllipsexC","GetEllipsexLeftC","PointOnEllipsex","Circle","GenerateCircle","GetCircleR","GetCircleCenter","PointOnCircle","PointInCircle","PointOutCircle","LineIntersectEllipsex","LineIntersectCircle"]
+node_names = ["Real", "Point","GetPoint","GetDistance",'Line', "GetLineb","PointOnLine", "GetLinea", "GetLinec","GetLine","Parallel","Vertical","Ellipsex","GetEllipsex","GetEllipsexC","GetEllipsexLeftC","PointOnEllipsex","Circle","GenerateCircle","GetCircleR","GetCircleCenter","PointOnCircle","PointInCircle","PointOutCircle","LineIntersectEllipsex","LineIntersectCircle","GetDistanceLineToCircle"]
 
 nodes = {}
 for name in node_names:
