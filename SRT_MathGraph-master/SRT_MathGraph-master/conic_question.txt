@@ -138,13 +138,68 @@ Query R
 Query c.expression
 6 end
 
-$7
+7
 conic_curve_graph
 Line l
 Real l_a
 Real l_b
 Real l_c
 GetLine l_a l_b l_c l
+Ellipsex e
+Real e_a
+Real e_b
+GetEllipsex e_a e_b e
+Point x
+Point y
+LineIntersectEllipsex x y l e
+Constraint l_a-1
+Constraint l_b
+Constraint l_c-0.1
+Constraint e_a-5
+Constraint e_b-4
+Real dis
+GetDistance x y dis
+Query x.coordinate
+Query y.coordinate
+7 end
+
+8
+conic_curve_graph
+Circle c
+Real c_a
+Real c_b
+Real c_r
+GenerateCircle c_a c_b c_r c
+Constraint c_a
+Constraint c_b
+Constraint c_r-1
+Line l
+Real l_a
+Real l_b
+Real l_c
+GetLine l_a l_b l_c l
+Constraint l_a+1
+Constraint l_b+1
+Constraint l_c-0
+Point p1
+Point p2
+LineIntersectCircle l c p1 p2
+Query p1.coordinate
+Query p2.coordinate
+Real DIS
+GetDistance p1 p2 DIS
+Query DIS
+8 end
+
+$7
+conic_curve_graph
+Line l
+Real l_a
+Real l_b
+Real l_c
+GetLinea l l_a
+GetLineb l l_b
+GetLinec l l_c
 Ellipsex e
 Real e_a
 Real e_b
@@ -162,32 +217,3 @@ GetDistance x y dis
 Query x.coordinate
 Query y.coordinate
 $7 end
-
-$8
-conic_curve_graph
-Circle c
-Real c_a
-Real c_b
-Real c_r
-GenerateCircle c_a c_b c_r c
-Constraint c_a-1
-Constraint c_b-1
-Constraint c_r-1
-Line l
-Real l_a
-Real l_b
-Real l_c
-GetLine l_a l_b l_c l
-Constraint l_a-1
-Constraint l_b+1
-Constraint l_c-0
-Point p1
-Point p2
-LineIntersectCircle l c p1 p2
-Query p1.coordinate
-Query p2.coordinate
-Real DIS
-GetDistance p1 p2 DIS
-Query DIS
-$8 end
-

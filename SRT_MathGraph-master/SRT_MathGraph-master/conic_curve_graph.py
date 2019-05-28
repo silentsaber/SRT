@@ -5,7 +5,8 @@ Real = ObjectNode("Real", "x", "True", toSympy="self['x']")
 Point=ObjectNode("Point","x y", "True",spec_attr={"coordinate":"'('+str($x)+','+str($y)+')'"})
 GetPoint=OperationNode("GetPoint",[Real,Real],[Point],"self.output[0]['x'],self.output[0]['y']=self.input[0]['x'],self.input[1]['x]",E=["self.output[0]['x']-self.input[0]['x']","self.output[0]['y']-self.input[1]['x']"])
 #计算距离
-GetDistance=OperationNode("GetDistance",[Point,Point],[Real],"self.output[0]['x']=sqrt((self.input[0]['x']-self.input[1]['x'])**2+(self.input[0]['y']-self.input[1]['y'])**2)",E=["self.output[0]['x']-sqrt((self.input[0]['x']-self.input[1]['x'])**2+(self.input[0]['y']-self.input[1]['y'])**2)"])
+GetDistance=OperationNode("GetDistance",[Point,Point],[Real],"self.output[0]['x']=sqrt((self.input[0]['x']-self.input[1]['x'])**2+(self.input[0]['y']-self.input[1]['y'])**2)",E=["sqrt(self.output[0]['x'])"])
+#GetDistance=OperationNode("GetDistance",[Point,Point],[Real],"self.output[0]['x']=sqrt((self.input[0]['x']-self.input[1]['x'])**2+(self.input[0]['y']-self.input[1]['y'])**2)",E=["self.output[0]['x']-sqrt(((self.input[0]['x']-self.input[1]['x'])**2+(self.input[0]['y']-self.input[1]['y'])**2))"])
 #直线,形式为ax+by+c=0
 Line=ObjectNode("Line","a b c","self['a']*self['a']+self['b']*self['b']>0",E=["(self['c']-1)*self['c']","(self['c']-1)*(self['b']-1)*self['b']","(self['c']-1)*(self['b']-1)*(self['a']-1)"],spec_attr={"expression":"'('+str($a)+')*x+('+str($b)+')*y+('+str($c)+')=0'"})
 #点在线上
