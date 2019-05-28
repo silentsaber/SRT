@@ -1,219 +1,66 @@
-#直线l1:x+y=0,  l2:2x+b+1=0   l1、l2交于点x  求x的坐标
 1
 conic_curve_graph
-Line l1
-Line l2
-Real a1
-Real a2
-Real b1
-Real b2
-Real c1
-Real c2
+Ellipsex C
+Point F1
+Real F1_x
+Real F1_y
+Constraint F1_x+2*sqrt(2)
+Constraint F1_y
+GetPoint F1_x F1_y F1
+GetEllipsexLeftC C F1
+Real a
+GetEllipsexa C a
+Constraint a-3
+Line l
+Real l_a
+Real l_b
+Real l_c
+Constraint l_a-1
+Constraint l_b+1
+Constraint l_c-2
+GetLine l_a l_b l_c l
 Point x
-GetLinea l1 a1
-GetLineb l1 b1
-GetLinec l1 c1
-GetLinea l2 a2
-GetLineb l2 b2
-GetLinec l2 c2
-Constraint a1-1
-Constraint a2-2
-Constraint b1-1
-Constraint b2-1
-Constraint c1-0
-Constraint c2-1
-PointOnLine x l1
-PointOnLine x l2
+Point y
+LineIntersectEllipsex x y l C
+Point z
+GetMidpoint x y z
+Query C.expression
+Query l.expression
 Query x.coordinate
+Query y.coordinate
+Query z.coordinate
 1 end
 
-#点a:(0,1)   b:(1,0)         直线l过点a、b    问l的表达式
-2
+$2
 conic_curve_graph
-Point a
-Point b
-Real a_x
-Real a_y
-Real b_x
-Real b_y
-GetPoint a_x a_y a
-GetPoint b_x b_y b
-Line l
-Constraint a_x-0
-Constraint a_y-1
-Constraint b_x-1
-Constraint b_y-0
-PointOnLine a l
-PointOnLine b l
-Query l.expression
-2 end
-
-#点a:(0,0)   直线l：x+y-1=0     点b在l上   ab距离为1 求点b的坐标
-3
-conic_curve_graph
-Point a
-Real a_x
-Real a_y
-GetPoint a_x a_y a
-Point b
-Line l
-Real l_a
-Real l_b
-Real l_c
-GetLine l_a l_b l_c l
-PointOnLine b l
-Real Disab
-GetDistance a b Disab
-Constraint a_x
-Constraint a_y
-Constraint l_a-1
-Constraint l_b-1
-Constraint l_c+1
-Constraint Disab-1
-Query b.coordinate
-3 end
-
-#点a:(0,0) b(0,1)    abc为等边三角形   求c的坐标
-4
-conic_curve_graph
-Point a
-Point b
-Real a_x
-Real a_y
-Real b_x
-Real b_y
-GetPoint a_x a_y a
-GetPoint b_x b_y b
-Point c
-Real disac
-Real disab
-Real disbc
-GetDistance a b disab
-GetDistance a c disac
-GetDistance b c disbc
-Constraint a_x
-Constraint a_y
-Constraint b_x
-Constraint b_y-1
-Constraint disab-disac
-Constraint disac-disbc
-Query c.coordinate
-4 end
-
-5
-conic_curve_graph
-Line l
-Real l_a
-Real l_b
-Real l_c
-GetLine l_a l_b l_c l
 Ellipsex e
-Real e_a
-Real e_b
-GetEllipsex e_a e_b e
-Point x
-PointOnLine x l
-PointOnEllipsex x e
-Constraint l_a-1
-Constraint l_b-1
-Constraint l_c-0
-Constraint e_a-5
-Constraint e_b-4
-Query x.coordinate
-5 end
-
-
-6
-conic_curve_graph
-Circle c
-Real c_a
-Real c_b
-Real c_r
-GenerateCircle c_a c_b c_r c
-Constraint c_a-1
-Constraint c_b-1
-Constraint c_r-1
-Query x.coordinate
-Query R
-Query c.expression
-6 end
-
-7
-conic_curve_graph
+Point A
+Real A_x
+GetEllipsexa e A_x
+Real A_y
+Constraint A_y
+GetPoint A_x A_y A
+Point O
+Real O_x
+Real O_y
+Constraint O_x
+Constraint O_y
+GetPoint O_x O_y O
 Line l
-Real l_a
-Real l_b
-Real l_c
-GetLine l_a l_b l_c l
-Ellipsex e
-Real e_a
-Real e_b
-GetEllipsex e_a e_b e
-Point x
-Point y
-LineIntersectEllipsex x y l e
-Constraint l_a-1
-Constraint l_b
-Constraint l_c-0.1
-Constraint e_a-5
-Constraint e_b-4
-Real dis
-GetDistance x y dis
-Query x.coordinate
-Query y.coordinate
-7 end
-
-8
-conic_curve_graph
-Circle c
-Real c_a
-Real c_b
-Real c_r
-GenerateCircle c_a c_b c_r c
-Constraint c_a
-Constraint c_b
-Constraint c_r-1
-Line l
-Real l_a
-Real l_b
-Real l_c
-GetLine l_a l_b l_c l
-Constraint l_a+1
-Constraint l_b+1
-Constraint l_c-0
-Point p1
-Point p2
-LineIntersectCircle l c p1 p2
-Query p1.coordinate
-Query p2.coordinate
-Real DIS
-GetDistance p1 p2 DIS
-Query DIS
-8 end
-
-$7
-conic_curve_graph
-Line l
-Real l_a
-Real l_b
-Real l_c
-GetLinea l l_a
-GetLineb l l_b
-GetLinec l l_c
-Ellipsex e
-Real e_a
-Real e_b
-GetEllipsex e_a e_b e
-Point x
-Point y
-LineIntersectEllipsex x y l e
-Constraint l_a-1
-Constraint l_b-1
-Constraint l_c-0
-Constraint e_a-5
-Constraint e_b-4
-Real dis
-GetDistance x y dis
-Query x.coordinate
-Query y.coordinate
-$7 end
+PointOnLine O l
+Point B
+Point C
+LineIntersectEllipsex C B l e
+Real disBC
+GetDistance B C disBC
+Real disAC
+GetDistance A C disAC
+Line l2
+PointOnLine A l2
+PointOnLine C l2
+Vertical l l2
+Constraint disBC-2*disAC
+Real e_e
+GetEllipsexEccentricity e e_e
+Query e_e
+$2 end

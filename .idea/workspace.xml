@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py" line="30" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bc11874f-b700-4e6e-83ba-60e510e87f5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRT_MathGraph-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SRT_MathGraph-master/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt" afterDir="false" />
     </list>
@@ -13,12 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="237">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -30,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-627" />
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -39,17 +43,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/graph_example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
+            <state relative-caret-position="561">
               <caret line="240" selection-start-line="240" selection-end-line="240" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="8" column="186" lean-forward="true" selection-start-line="8" selection-start-column="186" selection-end-line="8" selection-end-column="186" />
+            <state relative-caret-position="247">
+              <caret line="46" column="290" selection-start-line="46" selection-start-column="290" selection-end-line="46" selection-end-column="290" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/analytic_geometry.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -57,8 +70,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="211" column="16" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="16" />
+            <state relative-caret-position="316">
+              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/parser_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-570">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -66,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="241" selection-start-line="241" selection-end-line="241" />
+            <state relative-caret-position="273">
+              <caret line="234" selection-start-line="234" selection-end-line="234" />
             </state>
           </provider>
         </entry>
@@ -85,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="width" value="1910" />
     <option name="height" value="1080" />
@@ -177,22 +199,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -202,110 +224,87 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/node.py</url>
-          <line>240</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/node.py</url>
-          <line>241</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py</url>
           <line>58</line>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/node.py</url>
+          <line>241</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="r=results[0]" language="Python" />
-        <watch expression="constraints[:10]" language="Python" />
-        <watch expression="constraints[10:]" language="Python" />
-        <watch expression="r[basic_symbols[10]]=20*sqrt(41)/41" language="Python" />
-        <watch expression="r[basic_symbols[11]]=-20*sqrt(41)/41" language="Python" />
-        <watch expression="r[basic_symbols[14]]=40*sqrt(82)/41" language="Python" />
-        <watch expression="constraints[10].subs(r)" language="Python" />
-        <watch expression="l=[x for x in range(18)]" language="Python" />
-        <watch expression="ll=[constraints[x].subs(r) for x in range(18)]" language="Python" />
-        <watch expression="ll" language="Python" />
-        <watch expression="solve(constraints, basic_symbols, dict=True)" language="Python" />
-        <watch expression="re=solve(constraints[:10]+constraints[11:], basic_symbols[:14], dict=True)" language="Python" />
-        <watch expression="re" language="Python" />
-        <watch expression="aaa=re[3]" language="Python" />
-        <watch expression="aaa[basic_symbols[14]]=0" language="Python" />
-        <watch expression="aaa" language="Python" />
-        <watch expression="aaa" language="Python" />
-        <watch expression="aaaa=[constraints[x].subs(aaa) for x in range(18)]" language="Python" />
-        <watch expression="aaaa" language="Python" />
-        <watch expression="x" language="Python" />
-        <watch expression="y" language="Python" />
-        <watch expression="c=[x**2+y**2-1,x+y]" language="Python" />
-        <watch expression="bs=[x,y]" language="Python" />
-        <watch expression="solve(c,bs,dict=True)" language="Python" />
-        <watch expression="x1=Symbol('x1')" language="Python" />
-        <watch expression="y1=Symbol('y1')" language="Python" />
-        <watch expression="c=[x**2+y**2-1,x1**2+y1**2-1,x+y,x1+y1]" language="Python" />
-        <watch expression="bs=[x,y,x1,y1]" language="Python" />
-        <watch expression="d=Symbol('d')" language="Python" />
-        <watch expression="c.append(d-sqrt((x-x1)**2+(y-y1)**2))" language="Python" />
-        <watch expression="bs.append(d)" language="Python" />
-        <watch expression="solve(constraints[:5]+constraints[8:]+constraints[6:7], basic_symbols, dict=True)" language="Python" />
-        <watch expression="constraints[7:7]" language="Python" />
-        <watch expression="solve(constraints[5:8]+constraints[:4]+constraints[8:11],basic_symbols[:6],dict=True)" language="Python" />
+        <watch expression="ret.append(eval(e))" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>solve(constraints[5:8]+constraints[:4]+constraints[8:11],basic_symbols[:6],dict=True)</expression-string>
+        <expression-string>ret.append(eval(e))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[5:8]+constraints[:4],basic_symbols[:6],dict=True)</expression-string>
+        <expression-string>simplify((input[1]['x']**2)/(input[3]['a']**2)+(input[1]['y']**2)/(input[3]['b']**2))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[5:8],basic_symbols[:6],dict=True)</expression-string>
+        <expression-string>simplify((input[1]['x']**2)/(input[3]['a']**2)+(input[1]['y']**2)/(input[3]['b']**2)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[5:8],basic_symbols[:3],dict=True)</expression-string>
+        <expression-string>(input[1]['x']**2)/(input[3]['a']**2)+(input[1]['y']**2)/(input[3]['b']**2)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[5:8],basic_symbols,dict=True)</expression-string>
+        <expression-string>(input[1]['x']**2)/(input[3]['a']**2)+(input[1]['y']**2)/(input[3]['b']**2)-1</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[:5]+constraints[8:]+constraints[6:7], basic_symbols, dict=True)</expression-string>
+        <expression-string>input[0]['x']**2/input[3]['a']**2+input[0]['y']**2/input[3]['b']**2-1==0</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>constraints[7:7]</expression-string>
+        <expression-string>(input[1]['x']**2)/(input[3]['a']**2)+(input[1]['y']**2)/(input[3]['b']**2)==1</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[:5]+constraints[8:]+constraints[7:7], basic_symbols, dict=True)</expression-string>
+        <expression-string>(-3*sqrt(6)/10 + 1/5)**2 + (-9/5 - 3*sqrt(6)/10)**2/9-1</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[:6]+constraints[8:]+constraints[7:7], basic_symbols, dict=True)</expression-string>
+        <expression-string>(-3*sqrt(6)/10 + 1/5)**2 + (-9/5 - 3*sqrt(6)/10)**2/9</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>solve(constraints[:5]+constraints[8:], basic_symbols, dict=True)</expression-string>
+        <expression-string>input[1]['x']**2/(input[3]['a']**2)+input[1]['y']**2/(input[3]['b']**2)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -327,49 +326,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/analytic_geometry.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-627" />
+          <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="211" column="16" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/graph_example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
+        <state relative-caret-position="561">
           <caret line="240" selection-start-line="240" selection-end-line="240" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/parser_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_question.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/conic_curve_graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="8" column="186" lean-forward="true" selection-start-line="8" selection-start-column="186" selection-end-line="8" selection-end-column="186" />
+        <state relative-caret-position="247">
+          <caret line="46" column="290" selection-start-line="46" selection-start-column="290" selection-end-line="46" selection-end-column="290" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SRT_MathGraph-master/SRT_MathGraph-master/solve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
