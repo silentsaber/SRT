@@ -1,4 +1,4 @@
-1
+$1
 conic_curve_graph
 Ellipsex C
 Point F1
@@ -29,9 +29,9 @@ Query l.expression
 Query x.coordinate
 Query y.coordinate
 Query z.coordinate
-1 end
+$1 end
 
-$2
+2
 conic_curve_graph
 Ellipsex e
 Point A
@@ -63,4 +63,50 @@ Constraint disBC-2*disAC
 Real e_e
 GetEllipsexEccentricity e e_e
 Query e_e
-$2 end
+2 end
+
+
+$3
+conic_curve_graph
+Point O
+Real O_x
+Real O_y
+Constraint O_x
+Constraint O_y
+GetPoint O_x O_y O
+Line l
+PointOnLine O l
+Query l.expression
+$3 end
+
+$4
+conic_curve_graph
+Ellipsex e
+Point O
+Real O_x
+Real O_y
+Constraint O_x
+Constraint O_y
+GetPoint O_x O_y O
+Line l
+PointOnLine O l
+Query l.expression
+$4 end
+
+$5
+conic_curve_graph
+Real ZERO
+Constraint ZERO*ZERO
+Ellipsex e
+Query e.expression
+
+Point O
+Real O_x
+Real O_y
+Constraint O_x
+Constraint O_y
+GetPoint O_x O_y O
+Line l
+PointOnLine O l
+Query l.expression
+$5 end

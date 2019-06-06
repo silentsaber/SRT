@@ -56,7 +56,18 @@ def q_solve(question_input_list, graph_file, printTemp=False):
         print("未知量")
         print(print_tab, basic_symbols)
     #求解所有未知量
-    results = solve(constraints, basic_symbols, dict=True)
+    results = solve(constraints, basic_symbols, set=True)
+    # print(results)
+    dresults = []
+    if(len(results)>0):
+        for re in results[1]:
+            req = {}
+            for index in range(len(results[0])):
+                x=results[0][index]
+                req[x] = re[index]
+            dresults.append(req)
+    # print(dresults)
+    results=dresults
     #求所要的结果
     result_cnt = 0
     ret = []
